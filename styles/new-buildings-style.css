@@ -1,0 +1,25 @@
+.new-buildings .card{
+    max-width: 585px;
+    padding: 25px;
+}
+
+.new-buildings .card h3{
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.new-buildings .card p{
+    opacity: 0.7;
+}
+
+@media (max-width: 950px) {
+    .new-buildings .card{
+        padding: 10px;
+    }
+
+    .new-buildings .card h3{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}

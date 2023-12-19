@@ -1,0 +1,46 @@
+.gallery_swiper{
+    padding-top: 90px;
+    margin-top: -60px;
+}
+
+.gallery_swiper-slide{
+    height: auto;
+}
+.gallery .card{
+    height: 100%;
+    border: 1px solid transparent;
+} 
+.gallery .card h3>em{
+    font-weight: 400;
+    display: block;
+    font-style: normal;
+}
+
+.gallery .card p{
+    margin-top: 30px;
+}
+
+.gallery .card:hover{
+    border: 1px solid #FF733D;
+    box-shadow: 0px 0px 10px 5px rgba(255, 141, 0, 0.10);
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 950px) {
+    .gallery .card p{
+        margin-top: 20px;
+    }
+
+    .gallery_swiper{
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery_swiper{
+        margin-top: 0;
+        padding-top: 15px;
+    }
+    
+}
+

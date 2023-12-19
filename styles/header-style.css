@@ -1,0 +1,124 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
+}
+
+.header .container {
+   padding: 20px 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: #FEFEFE;
+}
+
+.nav-menu {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 45px; */
+}
+
+.nav-menu a{
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.nav-menu a:hover {
+    color: #FFC277;
+    transition: all 0.5s ease;
+}
+.contacts-list {
+    display: flex;
+    gap: 30px;
+    color: #FEFEFE;
+    font-weight: 600;
+}
+
+.contacts-list .mail{
+    color: #FFC277;
+}
+.contacts-list .mobile-whatsapp-icon{
+    display: none;
+}
+.burger {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    background-color: #FEFEFE;
+    margin-bottom: 6px;
+    transition: all 0.5s ease;
+}
+
+.header.open{
+    background: #F5F5F5;
+}
+.header.open .burger{
+    transform: rotate(90deg);
+    transition: all 0.5s ease;
+}
+
+.header.open .burger span{
+    background-color: #151515;
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 950px) {
+    .logo {
+        width: 33px;
+        height: 30px;
+    }
+    .logo img{
+        width: 100%;
+    }
+    .burger {
+        display: block;
+    }
+    .nav-menu,
+    .header .contacts-list {
+        width: 100%;
+        background-color: #F5F5F5;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+        color: #151515;
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        padding-left: 15px;
+    }
+    .header .contacts-list {
+        top: 194px;
+        padding: 34px 15px 15px;
+    }
+
+    .header .contacts-list li:nth-child(2){
+        order: -1;
+        color: #151515;
+    }
+    .header .contacts-list .mail{
+        text-decoration: underline;
+    }
+
+    .header .contacts-list .mobile-whatsapp-icon{
+        display: block;
+        margin-top: 10px;
+    }
+    .header .contacts-list .whatsapp-icon{
+        display: none;
+    }
+
+    .header.open .nav-menu,
+    .header.open .contacts-list{
+        left: 0;
+        transition: all 0.5s ease;
+    }
+    
+}

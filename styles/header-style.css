@@ -36,7 +36,9 @@
     color: #FEFEFE;
     font-weight: 600;
 }
-
+.contacts-list li a{
+    white-space: nowrap;
+}
 .contacts-list .mail{
     color: #FFC277;
 }

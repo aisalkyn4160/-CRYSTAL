@@ -138,6 +138,7 @@ section{
 	display: flex;
 	gap: 29px;
 	flex-wrap: wrap;
+	justify-content: space-around;
 	margin-top: 30px;
 }
 
@@ -221,7 +222,7 @@ section{
 	}
     h4{
 		font-size: 12px;
-		max-width: 265px;
+		max-width: 90%;
 	}
 	button{
 		padding: 12px 54px 15px 54px;
@@ -240,9 +241,6 @@ section{
 	}
 	section{
 		padding-top: 40px;
-	}
-	.cards{
-		justify-content: space-around;
 	}
 }
 

@@ -1,19 +1,17 @@
 // ------------------------------------------------------------------меню-----------------------------------------------------------
 const header = document.querySelector('.header')
+const headerOpen = document.querySelector('.header.open')
 const headerHeight = document.querySelector('.header').clientHeight
 
 console.log(headerHeight)
 // меню при скролле
 document.onscroll = function() {
     let scrollY = window.scrollY 
-       if (scrollY > headerHeight && !header.classList.contains('open')) {
-        header.style.backgroundColor = '#151515'
-        header.style.transition = '0.3s'
-        } else if(header.classList.contains('open')) {
-            header.style.backgroundColor = '#F5F5F5'
-        }else{
-            header.style.backgroundColor = 'transparent'
-        }
+    if (scrollY > headerHeight) {
+        header.classList.add('scroll')
+    } else {
+        header.classList.remove('scroll')
+    }
 } 
 
 const sections = document.querySelectorAll('section');
@@ -48,9 +46,13 @@ document.addEventListener('click', (event) => {
         setTimeout(() => {
             header.classList.remove('open');
         }, 300)
+        
+        sections.forEach((section) => {
+          if (href === `#${section.id}`) {
+            section.style.paddingTop = '0px';
+          }
+        });
 
-        // const href = target.getAttribute('href');
-        // const section = document.querySelector(href);
     }
 })
 

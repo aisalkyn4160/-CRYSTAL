@@ -3,7 +3,6 @@ const header = document.querySelector('.header')
 const headerOpen = document.querySelector('.header.open')
 const headerHeight = document.querySelector('.header').clientHeight
 
-console.log(headerHeight)
 // меню при скролле
 document.onscroll = function() {
     let scrollY = window.scrollY 
@@ -15,24 +14,35 @@ document.onscroll = function() {
 } 
 
 const sections = document.querySelectorAll('section');
+const btnLinks = document.querySelectorAll('.btn-link')
 // меню при клике
 document.addEventListener('click', (event) => {
   const target = event.target;
   
-  if (target.matches('.nav-menu a, .btn-link')) {
+  if (target.matches('.nav-menu a')) {
     const href = target.getAttribute('href');
-    
     sections.forEach((section) => {
       if (href === `#${section.id}`) {
-        section.style.paddingTop = headerHeight + 30 + 'px';
+        section.style.paddingTop = headerHeight + 20 + 'px';
       } else {
         section.style.paddingTop = '';
       }
     });
-  }
+  } 
 });
 
-
+btnLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    const href = link.getAttribute('href')
+    sections.forEach((section) => {
+      if (href === `#${section.id}`) {
+        section.style.paddingTop = headerHeight + 20 + 'px';
+      } else {
+        section.style.paddingTop = '';
+      }
+    })
+  })
+})
 const burger = document.querySelector('.burger')
 
 burger.addEventListener('click', () => {

@@ -19,7 +19,7 @@ const sections = document.querySelectorAll('section');
 document.addEventListener('click', (event) => {
   const target = event.target;
   
-  if (target.matches('.nav-menu a, button a')) {
+  if (target.matches('.nav-menu a, .btn-link')) {
     const href = target.getAttribute('href');
     
     sections.forEach((section) => {

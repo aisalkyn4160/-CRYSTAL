@@ -81,6 +81,7 @@ textarea::placeholder{
     background: #FFF;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
 }
 input[type="checkbox"]:checked + .checkmark:after {
     content: "✓";
@@ -144,9 +145,6 @@ input[type="checkbox"]:checked + .checkmark:after {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
-    }
-    .form-content{
-
     }
     
 }

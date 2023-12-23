@@ -1,10 +1,19 @@
+.services .cards{
+    grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+}
 .services .card{
-    width: 278px;
+    width: 100%;
 }
 
 @media (max-width: 635px) {
-    .services .card{
-        width: 48.1%; 
+    .services .cards{
+        grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
+        grid-gap: 10px;
+    }
+}
+@media (max-width: 450px) {
+    .services .cards{
+        grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
     }
     
 }

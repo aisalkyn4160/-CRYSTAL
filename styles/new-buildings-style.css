@@ -1,5 +1,7 @@
+.new-buildings .cards{
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+}
 .new-buildings .card{
-    max-width: 585px;
     padding: 25px;
 }
 
@@ -15,11 +17,19 @@
 
 @media (max-width: 950px) {
     .new-buildings .card{
-        padding: 10px;
+        padding: 10px 10px 20px;
     }
 
     .new-buildings .card h3{
         font-size: 15px;
         margin-bottom: 10px;
     }
+}
+
+@media (max-width: 550px) {
+    .new-buildings .cards{
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-gap: 10px;
+    }
+    
 }

@@ -1,12 +1,11 @@
 .banner{
-    /* width: 100%; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
 }
 
 .banner .container{
-    padding: 325px 15px;
+    padding: 250px 15px;
 }
 
 .banner p{

@@ -64,6 +64,9 @@ body{
 	color: #151515;
 	scroll-behavior: smooth;
 }
+body.no-scroll{
+	overflow: hidden;
+}
 .container{
 	max-width: 1230px;
 	margin: 0 auto;

@@ -43,10 +43,13 @@ btnLinks.forEach((link) => {
     })
   })
 })
+
+// burger-меню при клике
 const burger = document.querySelector('.burger')
 
 burger.addEventListener('click', () => {
   header.classList.toggle('open')
+  document.body.classList.toggle('no-scroll')
 })
 
 document.addEventListener('click', (event) => {
@@ -55,6 +58,7 @@ document.addEventListener('click', (event) => {
     if(target.matches('.nav-menu a, .contacts-list a')) {
         setTimeout(() => {
             header.classList.remove('open');
+            document.body.classList.remove('no-scroll');
         }, 300)
         
         sections.forEach((section) => {
